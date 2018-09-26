@@ -1,5 +1,5 @@
 //
-//  uiButton.swift
+//  uiLabel.swift
 //  Maps
 //
 //  Created by К.К. on 26.09.18.
@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class uiButton:UIButton {
+class uiLabel:UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()  // super func to be called first
         
         layer.backgroundColor = UIColor.lightGray.cgColor
-        self.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        self.textColor = UIColor.white
         layer.borderColor = UIColor.orange.cgColor
         layer.borderWidth = 2.0
-        layer.cornerRadius = 10
+        layer.cornerRadius = 5
     }
-
+    
 }

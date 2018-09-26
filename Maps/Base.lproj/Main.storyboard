@@ -30,22 +30,229 @@
                                     <segue destination="PbG-dU-5nd" kind="show" id="fSm-BI-79s"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-nR-hLx" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="300" y="368.5" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="s6s-oi-QVX"/>
+                                    <constraint firstAttribute="width" constant="40" id="xYj-N1-j9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xYj-N1-j9S"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxJ-lb-S27" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="300" y="438.5" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Owb-E4-h9y"/>
+                                    <constraint firstAttribute="width" constant="40" id="cFf-oJ-9mc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cFf-oJ-9mc"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HK-6t-m3B" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="300" y="508.5" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="cUe-Om-Efg"/>
+                                    <constraint firstAttribute="width" constant="40" id="k1R-wb-gid"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="pqD-8h-dNT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="k1R-wb-gid"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUW-yJ-078" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="300" y="578.5" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3fa-WL-FGI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="8y0-cg-RoQ"/>
+                                    <constraint firstAttribute="height" constant="20" id="Acl-82-yTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3fa-WL-FGI"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-90" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="yTA-Fn-8ux" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="3" y="388.5" width="369" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QBV-E9-Sgt"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="latitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dpu-Qb-ZYn"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Set                          Latitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-D3-M5w" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="5" y="368.5" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9U3-5w-wYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Set                          Longitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJK-3v-qP8" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="5" y="438.5" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="3mu-ff-uOa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="PI3-nF-DJm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PI3-nF-DJm"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Set                          Latitude Delta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-Br-o5G" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="5" y="508.5" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="TNQ-Kf-Qmp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="WTY-ea-SGq"/>
+                                    <constraint firstAttribute="height" constant="20" id="uU4-lT-VZ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TNQ-Kf-Qmp"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Set                          Longitude Delta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS3-4R-pT1" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="5" y="578.5" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="KMD-mO-bve"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="fTh-Z6-vxZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vUg-m5-tak"/>
+                                    <constraint firstAttribute="height" constant="20" id="xN7-jA-y19"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fTh-Z6-vxZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-180" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="ybP-ph-2g9" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="3" y="458.5" width="369" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8gb-3H-ksC"/>
+                                    <constraint firstAttribute="height" constant="30" id="cgY-pN-Z2P"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="longitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y9j-l1-Ko3"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kv2-No-jbX" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="3" y="528.5" width="369" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dax-U8-7SZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="mNW-Gn-VZs"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="qbe-KA-EBD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="latitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JXf-gY-LZt"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="XIR-9Q-oV3" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="3" y="598.5" width="369" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="44V-9V-SsO"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="PU7-H9-dLw"/>
+                                    <constraint firstAttribute="height" constant="30" id="VaP-5Q-rvd"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="hAo-lj-daY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="longitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ruY-lL-XbL"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="n5z-iB-J4k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1dD-wc-LyT"/>
+                            <constraint firstItem="Kv2-No-jbX" firstAttribute="top" secondItem="rD3-Br-o5G" secondAttribute="bottom" id="1dg-Dl-i2m"/>
                             <constraint firstItem="n5z-iB-J4k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2DY-g2-lPV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMA-nR-hLx" secondAttribute="trailing" constant="5" id="3Br-Fh-Igz"/>
+                            <constraint firstItem="3HK-6t-m3B" firstAttribute="leading" secondItem="rD3-Br-o5G" secondAttribute="trailing" constant="5" id="58A-QV-1sO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n5z-iB-J4k" secondAttribute="trailing" id="61h-IJ-oF4"/>
+                            <constraint firstItem="qS3-4R-pT1" firstAttribute="top" secondItem="Kv2-No-jbX" secondAttribute="bottom" constant="20" id="6Yn-J4-wwI"/>
+                            <constraint firstItem="SMA-nR-hLx" firstAttribute="leading" secondItem="HrL-D3-M5w" secondAttribute="trailing" constant="5" id="8sZ-yN-Kn8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxJ-lb-S27" secondAttribute="trailing" constant="5" id="96n-Tb-wFB"/>
+                            <constraint firstItem="HrL-D3-M5w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="AW1-Wx-hfV"/>
+                            <constraint firstItem="hJK-3v-qP8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Bc8-2L-dy8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HrL-D3-M5w" secondAttribute="trailing" constant="80" id="C8W-Jl-yXD"/>
+                            <constraint firstItem="rD3-Br-o5G" firstAttribute="top" secondItem="ybP-ph-2g9" secondAttribute="bottom" constant="20" id="Cj9-cV-yRh"/>
+                            <constraint firstItem="gUW-yJ-078" firstAttribute="leading" secondItem="qS3-4R-pT1" secondAttribute="trailing" constant="5" id="DOT-rH-zW7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3HK-6t-m3B" secondAttribute="trailing" constant="5" id="Emf-N1-oOr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hJK-3v-qP8" secondAttribute="trailing" constant="80" id="Fc8-P8-rr2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yTA-Fn-8ux" secondAttribute="trailing" constant="5" id="HD4-EU-HtU"/>
                             <constraint firstItem="gry-oG-7t2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P0u-SD-cT2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gUW-yJ-078" secondAttribute="trailing" constant="5" id="P15-Ia-AK5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n5z-iB-J4k" secondAttribute="bottom" id="P1t-JF-JCd"/>
+                            <constraint firstItem="yTA-Fn-8ux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="ScZ-Jl-v4D"/>
+                            <constraint firstItem="Kv2-No-jbX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="SfM-9i-avI"/>
+                            <constraint firstItem="gUW-yJ-078" firstAttribute="centerY" secondItem="qS3-4R-pT1" secondAttribute="centerY" id="TMh-9h-i50"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XIR-9Q-oV3" secondAttribute="trailing" constant="5" id="Tzy-Xi-UfG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kv2-No-jbX" secondAttribute="trailing" constant="5" id="UNh-yX-nS4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rD3-Br-o5G" secondAttribute="trailing" constant="80" id="UPc-tT-scT"/>
+                            <constraint firstItem="XIR-9Q-oV3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="aB5-sh-K7r"/>
+                            <constraint firstItem="yTA-Fn-8ux" firstAttribute="top" secondItem="SMA-nR-hLx" secondAttribute="bottom" id="fHi-3Q-1JZ"/>
+                            <constraint firstItem="bxJ-lb-S27" firstAttribute="leading" secondItem="hJK-3v-qP8" secondAttribute="trailing" constant="5" id="gjR-Bp-o8f"/>
+                            <constraint firstItem="bxJ-lb-S27" firstAttribute="centerY" secondItem="hJK-3v-qP8" secondAttribute="centerY" id="hKq-Dp-Oaf"/>
+                            <constraint firstItem="ybP-ph-2g9" firstAttribute="top" secondItem="bxJ-lb-S27" secondAttribute="bottom" id="jUK-9g-8Et"/>
+                            <constraint firstItem="hJK-3v-qP8" firstAttribute="top" secondItem="yTA-Fn-8ux" secondAttribute="bottom" constant="20" id="kFq-RI-GYV"/>
+                            <constraint firstItem="SMA-nR-hLx" firstAttribute="centerY" secondItem="HrL-D3-M5w" secondAttribute="centerY" id="kKy-p0-7KP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qS3-4R-pT1" secondAttribute="trailing" constant="80" id="lhK-vs-CxC"/>
+                            <constraint firstItem="XIR-9Q-oV3" firstAttribute="top" secondItem="gUW-yJ-078" secondAttribute="bottom" id="lkG-bt-KNz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ybP-ph-2g9" secondAttribute="trailing" constant="5" id="n5P-zh-WF7"/>
+                            <constraint firstItem="ybP-ph-2g9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="nlc-nN-SFC"/>
+                            <constraint firstItem="HrL-D3-M5w" firstAttribute="top" secondItem="gry-oG-7t2" secondAttribute="bottom" constant="20" id="owz-B0-2FD"/>
                             <constraint firstItem="gry-oG-7t2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pzX-me-JRD"/>
+                            <constraint firstItem="rD3-Br-o5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="qZH-H9-Jq6"/>
+                            <constraint firstItem="qS3-4R-pT1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rHE-97-3jb"/>
+                            <constraint firstItem="3HK-6t-m3B" firstAttribute="centerY" secondItem="rD3-Br-o5G" secondAttribute="centerY" id="rgb-VA-Eld"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="latitudeDeltaLabel" destination="3HK-6t-m3B" id="gaR-HT-O3j"/>
+                        <outlet property="latitudeDeltaSlider" destination="Kv2-No-jbX" id="mk9-tf-zbt"/>
+                        <outlet property="latitudeLabel" destination="SMA-nR-hLx" id="3kc-v3-JkG"/>
+                        <outlet property="latitudeSlider" destination="yTA-Fn-8ux" id="9Cp-fS-oU7"/>
+                        <outlet property="longitudeDeltaLabel" destination="gUW-yJ-078" id="WJc-wM-Okh"/>
+                        <outlet property="longitudeDeltaSlider" destination="XIR-9Q-oV3" id="Pqg-bf-Xr6"/>
+                        <outlet property="longitudeLabel" destination="bxJ-lb-S27" id="L7l-aw-nPx"/>
+                        <outlet property="longitudeSlider" destination="ybP-ph-2g9" id="Ifk-ch-alU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-110" y="-31"/>
+            <point key="canvasLocation" x="-111.2" y="-31.03448275862069"/>
         </scene>
         <!--Basic Map-->
         <scene sceneID="TDK-fR-KQb">

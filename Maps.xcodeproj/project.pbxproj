@@ -14,6 +14,9 @@
 		354AF2E9215BD2CF00D02148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354AF2E7215BD2CF00D02148 /* LaunchScreen.storyboard */; };
 		354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F1215BE33E00D02148 /* BasicMapVC.swift */; };
 		354AF2F5215BE5F500D02148 /* uiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F4215BE5F500D02148 /* uiButton.swift */; };
+		354AF2F8215BF94200D02148 /* LocationDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F7215BF94200D02148 /* LocationDataSet.swift */; };
+		354AF2FA215C0BFE00D02148 /* uiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F9215C0BFE00D02148 /* uiLabel.swift */; };
+		354AF2FC215C0D7A00D02148 /* uiSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2FB215C0D7A00D02148 /* uiSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		354AF2EA215BD2CF00D02148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354AF2F1215BE33E00D02148 /* BasicMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMapVC.swift; sourceTree = "<group>"; };
 		354AF2F4215BE5F500D02148 /* uiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiButton.swift; sourceTree = "<group>"; };
+		354AF2F7215BF94200D02148 /* LocationDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataSet.swift; sourceTree = "<group>"; };
+		354AF2F9215C0BFE00D02148 /* uiLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiLabel.swift; sourceTree = "<group>"; };
+		354AF2FB215C0D7A00D02148 /* uiSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				354AF2F4215BE5F500D02148 /* uiButton.swift */,
+				354AF2F9215C0BFE00D02148 /* uiLabel.swift */,
+				354AF2FB215C0D7A00D02148 /* uiSlider.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 		354AF2F6215BE80100D02148 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				354AF2F7215BF94200D02148 /* LocationDataSet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354AF2FA215C0BFE00D02148 /* uiLabel.swift in Sources */,
 				354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */,
+				354AF2FC215C0D7A00D02148 /* uiSlider.swift in Sources */,
 				354AF2E1215BD2CE00D02148 /* HomeVC.swift in Sources */,
 				354AF2DF215BD2CE00D02148 /* AppDelegate.swift in Sources */,
+				354AF2F8215BF94200D02148 /* LocationDataSet.swift in Sources */,
 				354AF2F5215BE5F500D02148 /* uiButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

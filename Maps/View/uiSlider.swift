@@ -1,5 +1,5 @@
 //
-//  uiButton.swift
+//  uiSlider.swift
 //  Maps
 //
 //  Created by К.К. on 26.09.18.
@@ -9,16 +9,15 @@
 import Foundation
 import UIKit
 
-class uiButton:UIButton {
+class uiSlider:UISlider {
     
     override func awakeFromNib() {
         super.awakeFromNib()  // super func to be called first
         
         layer.backgroundColor = UIColor.lightGray.cgColor
-        self.setTitleColor(UIColor.white, for: UIControl.State.normal)
         layer.borderColor = UIColor.orange.cgColor
         layer.borderWidth = 2.0
         layer.cornerRadius = 10
     }
-
+    
 }
