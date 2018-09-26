@@ -12,6 +12,8 @@
 		354AF2E4215BD2CE00D02148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354AF2E2215BD2CE00D02148 /* Main.storyboard */; };
 		354AF2E6215BD2CF00D02148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354AF2E5215BD2CF00D02148 /* Assets.xcassets */; };
 		354AF2E9215BD2CF00D02148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354AF2E7215BD2CF00D02148 /* LaunchScreen.storyboard */; };
+		354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F1215BE33E00D02148 /* BasicMapVC.swift */; };
+		354AF2F5215BE5F500D02148 /* uiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F4215BE5F500D02148 /* uiButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		354AF2E5215BD2CF00D02148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		354AF2E8215BD2CF00D02148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		354AF2EA215BD2CF00D02148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354AF2F1215BE33E00D02148 /* BasicMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMapVC.swift; sourceTree = "<group>"; };
+		354AF2F4215BE5F500D02148 /* uiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		354AF2DD215BD2CE00D02148 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				354AF2F6215BE80100D02148 /* Model */,
+				354AF2F3215BE5CE00D02148 /* View */,
 				354AF2F0215BD2E400D02148 /* Controller */,
 				354AF2DE215BD2CE00D02148 /* AppDelegate.swift */,
 				354AF2E2215BD2CE00D02148 /* Main.storyboard */,
@@ -68,8 +74,24 @@
 			isa = PBXGroup;
 			children = (
 				354AF2E0215BD2CE00D02148 /* HomeVC.swift */,
+				354AF2F1215BE33E00D02148 /* BasicMapVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		354AF2F3215BE5CE00D02148 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				354AF2F4215BE5F500D02148 /* uiButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		354AF2F6215BE80100D02148 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */,
 				354AF2E1215BD2CE00D02148 /* HomeVC.swift in Sources */,
 				354AF2DF215BD2CE00D02148 /* AppDelegate.swift in Sources */,
+				354AF2F5215BE5F500D02148 /* uiButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
