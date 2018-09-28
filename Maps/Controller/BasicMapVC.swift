@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class BasicMap: UIViewController, MKMapViewDelegate  {
+class BasicMapVC: UIViewController, MKMapViewDelegate  {
     
     @IBOutlet var map: MKMapView!
 
@@ -17,14 +17,7 @@ class BasicMap: UIViewController, MKMapViewDelegate  {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let latitude: CLLocationDegrees = 27.1
-        let longitude: CLLocationDegrees = 78.0
-        let lanDelta: CLLocationDegrees = 0.05
-        let lonDelta: CLLocationDegrees = 0.05
-        let span = MKCoordinateSpan(latitudeDelta: lanDelta, longitudeDelta: lonDelta)
-        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let region = MKCoordinateRegion(center: coordinates, span: span)
-        map.setRegion(region, animated: true)
+        
     }
  
 }

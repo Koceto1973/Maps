@@ -27,7 +27,7 @@
                                 </constraints>
                                 <state key="normal" title="Browse Map"/>
                                 <connections>
-                                    <segue destination="PbG-dU-5nd" kind="show" id="fSm-BI-79s"/>
+                                    <segue destination="PbG-dU-5nd" kind="show" id="5ht-RX-5HS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-nR-hLx" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="height" constant="30" id="QBV-E9-Sgt"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="latitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dpu-Qb-ZYn"/>
+                                    <action selector="latitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ULH-ol-4e2"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Set                          Latitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrL-D3-M5w" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="30" id="cgY-pN-Z2P"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="longitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y9j-l1-Ko3"/>
+                                    <action selector="longitudeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mXA-5w-zCt"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kv2-No-jbX" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
@@ -176,7 +176,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="qbe-KA-EBD"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="latitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JXf-gY-LZt"/>
+                                    <action selector="latitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CLq-e1-2cC"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="XIR-9Q-oV3" customClass="uiSlider" customModule="Maps" customModuleProvider="target">
@@ -188,7 +188,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="hAo-lj-daY"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="longitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ruY-lL-XbL"/>
+                                    <action selector="longitudeDeltaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="urV-nP-lKy"/>
                                 </connections>
                             </slider>
                         </subviews>
@@ -240,24 +240,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="latitudeDeltaLabel" destination="3HK-6t-m3B" id="gaR-HT-O3j"/>
-                        <outlet property="latitudeDeltaSlider" destination="Kv2-No-jbX" id="mk9-tf-zbt"/>
-                        <outlet property="latitudeLabel" destination="SMA-nR-hLx" id="3kc-v3-JkG"/>
-                        <outlet property="latitudeSlider" destination="yTA-Fn-8ux" id="9Cp-fS-oU7"/>
-                        <outlet property="longitudeDeltaLabel" destination="gUW-yJ-078" id="WJc-wM-Okh"/>
-                        <outlet property="longitudeDeltaSlider" destination="XIR-9Q-oV3" id="Pqg-bf-Xr6"/>
-                        <outlet property="longitudeLabel" destination="bxJ-lb-S27" id="L7l-aw-nPx"/>
-                        <outlet property="longitudeSlider" destination="ybP-ph-2g9" id="Ifk-ch-alU"/>
+                        <outlet property="latitudeDeltaLabel" destination="3HK-6t-m3B" id="clD-t1-fRi"/>
+                        <outlet property="latitudeDeltaSlider" destination="Kv2-No-jbX" id="MYV-yj-tXQ"/>
+                        <outlet property="latitudeLabel" destination="SMA-nR-hLx" id="dKb-lO-djB"/>
+                        <outlet property="latitudeSlider" destination="yTA-Fn-8ux" id="Wpd-nj-lPo"/>
+                        <outlet property="longitudeDeltaLabel" destination="gUW-yJ-078" id="Hx3-69-gZJ"/>
+                        <outlet property="longitudeDeltaSlider" destination="XIR-9Q-oV3" id="kSJ-BT-mTb"/>
+                        <outlet property="longitudeLabel" destination="bxJ-lb-S27" id="GKu-kG-j76"/>
+                        <outlet property="longitudeSlider" destination="ybP-ph-2g9" id="udh-3m-Hna"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-111.2" y="-31.03448275862069"/>
         </scene>
-        <!--Basic Map-->
+        <!--Basic MapVC-->
         <scene sceneID="TDK-fR-KQb">
             <objects>
-                <viewController id="PbG-dU-5nd" customClass="BasicMap" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PbG-dU-5nd" customClass="BasicMapVC" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KVK-xR-eRu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +273,7 @@
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="MzU-cO-rFs"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="eRX-Mc-NfR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -288,9 +288,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ycT-9x-sRa"/>
                     </view>
-                    <connections>
-                        <outlet property="map" destination="brV-px-Xys" id="c6j-te-Rzm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gr-NH-YPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
