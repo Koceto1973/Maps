@@ -27,7 +27,7 @@
                                 </constraints>
                                 <state key="normal" title="Browse Map"/>
                                 <connections>
-                                    <segue destination="PbG-dU-5nd" kind="show" id="5ht-RX-5HS"/>
+                                    <segue destination="PbG-dU-5nd" kind="show" identifier="HomeVCsegueBasicMapVC" id="5ht-RX-5HS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-nR-hLx" customClass="uiLabel" customModule="Maps" customModuleProvider="target">
@@ -288,6 +288,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ycT-9x-sRa"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="brV-px-Xys" id="T3U-qv-jPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gr-NH-YPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

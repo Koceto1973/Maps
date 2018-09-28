@@ -40,7 +40,13 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeVCsegueBasicMapVC" {
+            let lds:locationDataSet = locationDataSet.init(lat: Double(latitudeLabel.text!)!, lon: Double(longitudeLabel.text!)!, latD: Double(latitudeDeltaLabel.text!)!, lonD: Double(longitudeDeltaLabel.text!)!)
+            let basicMapVC = segue.destination as! BasicMapVC
+            basicMapVC.lds = lds
+        }
+    }
     
     
 }

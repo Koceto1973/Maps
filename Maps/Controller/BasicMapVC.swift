@@ -12,12 +12,11 @@ import MapKit
 class BasicMapVC: UIViewController, MKMapViewDelegate  {
     
     @IBOutlet var map: MKMapView!
+    var lds:locationDataSet = locationDataSet.init(lat: 0, lon: 0, latD: 1, lonD: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+        map.setRegion(lds.region, animated: true)
     }
  
 }
