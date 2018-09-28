@@ -74,6 +74,24 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(self.longpress(gestureRecognizer:)))
+        uilpgr.minimumPressDuration = 2
+        map.addGestureRecognizer(uilpgr)
+    }
+    
+   // map annotation add by long press gesture recognizer
+    @objc func longpress(gestureRecognizer: UIGestureRecognizer) {
+    
+        let touchPoint = gestureRecognizer.location(in: self.map)
+        let coordinates = map.convert(touchPoint, toCoordinateFrom: self.map)
+    
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        annotation.title = "New place"
+        annotation.subtitle = "Maybe I'll go here too..."
+        map.addAnnotation(annotation)
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		354A5305215EB3CA00B391F9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354A5304215EB3CA00B391F9 /* CoreLocation.framework */; };
+		354A5307215EBAE400B391F9 /* NavigatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354A5306215EBAE400B391F9 /* NavigatorVC.swift */; };
 		354AF2DF215BD2CE00D02148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2DE215BD2CE00D02148 /* AppDelegate.swift */; };
 		354AF2E1215BD2CE00D02148 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2E0215BD2CE00D02148 /* HomeVC.swift */; };
 		354AF2E4215BD2CE00D02148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354AF2E2215BD2CE00D02148 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		354A5304215EB3CA00B391F9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		354A5306215EBAE400B391F9 /* NavigatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorVC.swift; sourceTree = "<group>"; };
 		354AF2DB215BD2CE00D02148 /* Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		354AF2DE215BD2CE00D02148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		354AF2E0215BD2CE00D02148 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -39,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354A5305215EB3CA00B391F9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354A5303215EB3C900B391F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				354A5304215EB3CA00B391F9 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		354AF2D2215BD2CE00D02148 = {
 			isa = PBXGroup;
 			children = (
 				354AF2DD215BD2CE00D02148 /* Maps */,
 				354AF2DC215BD2CE00D02148 /* Products */,
+				354A5303215EB3C900B391F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +95,7 @@
 			children = (
 				354AF2E0215BD2CE00D02148 /* HomeVC.swift */,
 				354AF2F1215BE33E00D02148 /* BasicMapVC.swift */,
+				354A5306215EBAE400B391F9 /* NavigatorVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354A5307215EBAE400B391F9 /* NavigatorVC.swift in Sources */,
 				354AF2FA215C0BFE00D02148 /* uiLabel.swift in Sources */,
 				354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */,
 				354AF2FC215C0D7A00D02148 /* uiSlider.swift in Sources */,
