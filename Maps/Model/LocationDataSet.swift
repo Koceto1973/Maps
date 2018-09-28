@@ -28,6 +28,8 @@ struct locationDataSet {
         self.region = MKCoordinateRegion(center: self.coordinates, span: self.span)
     
     }
+    
+   
    
 }
 

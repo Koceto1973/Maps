@@ -16,6 +16,18 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let homeVC = segue.destination as? HomeVC {
+            print("going back to homeVC")
+            homeVC.lds = self.lds
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
         map.setRegion(lds.region, animated: true)
     }
  

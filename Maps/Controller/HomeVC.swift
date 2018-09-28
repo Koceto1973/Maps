@@ -34,18 +34,33 @@ class HomeVC: UIViewController {
         longitudeDeltaLabel.text = String(longitudeDeltaSlider.value)
     }
  
- 
+    var lds:locationDataSet = locationDataSet.init(lat: 0, lon: 0, latD: 1, lonD: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeVCsegueBasicMapVC" {
-            let lds:locationDataSet = locationDataSet.init(lat: Double(latitudeLabel.text!)!, lon: Double(longitudeLabel.text!)!, latD: Double(latitudeDeltaLabel.text!)!, lonD: Double(longitudeDeltaLabel.text!)!)
+            self.lds = locationDataSet.init(lat: Double(latitudeLabel.text!)!, lon: Double(longitudeLabel.text!)!, latD: Double(latitudeDeltaLabel.text!)!, lonD: Double(longitudeDeltaLabel.text!)!)
             let basicMapVC = segue.destination as! BasicMapVC
             basicMapVC.lds = lds
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.latitudeLabel.text = String(lds.latitude)
+        self.latitudeSlider.value = Float(lds.latitude)
+        self.longitudeLabel.text = String(lds.longitude)
+        self.longitudeSlider.value = Float(lds.longitude)
+        self.latitudeDeltaLabel.text = String(lds.latDelta)
+        self.latitudeSlider.value = Float(lds.latDelta)
+        self.longitudeDeltaLabel.text = String(lds.lonDelta)
+        self.longitudeDeltaSlider.value = Float(lds.lonDelta)
+        
+             
     }
     
     
