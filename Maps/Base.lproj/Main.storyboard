@@ -274,7 +274,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Up"/>
                                 <connections>
-                                    <action selector="Up:" destination="PbG-dU-5nd" eventType="touchUpInside" id="WdE-sl-4sf"/>
+                                    <action selector="N:" destination="PbG-dU-5nd" eventType="touchUpInside" id="WdE-sl-4sf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dL-gG-zrB">
@@ -298,7 +298,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Rght"/>
                                 <connections>
-                                    <action selector="Right:" destination="PbG-dU-5nd" eventType="touchUpInside" id="nvi-vb-tBn"/>
+                                    <action selector="E:" destination="PbG-dU-5nd" eventType="touchUpInside" id="nvi-vb-tBn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB0-n4-dOx">
@@ -322,7 +322,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Left"/>
                                 <connections>
-                                    <action selector="Left:" destination="PbG-dU-5nd" eventType="touchUpInside" id="DAq-Fz-AyG"/>
+                                    <action selector="W:" destination="PbG-dU-5nd" eventType="touchUpInside" id="DAq-Fz-AyG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8r-PG-70m">
@@ -372,10 +372,10 @@
                         <viewLayoutGuide key="safeArea" id="ycT-9x-sRa"/>
                     </view>
                     <connections>
-                        <outlet property="DownButton" destination="6dL-gG-zrB" id="DEF-Vn-nb8"/>
-                        <outlet property="LeftButton" destination="GkE-Rn-qH1" id="6Rl-dJ-u1Y"/>
-                        <outlet property="RightButton" destination="jTL-OG-Cdg" id="ZwV-m7-oSY"/>
-                        <outlet property="UpButton" destination="l1I-UX-q9p" id="rWS-7T-79C"/>
+                        <outlet property="EButton" destination="jTL-OG-Cdg" id="ZwV-m7-oSY"/>
+                        <outlet property="NButton" destination="l1I-UX-q9p" id="rWS-7T-79C"/>
+                        <outlet property="SButton" destination="6dL-gG-zrB" id="DEF-Vn-nb8"/>
+                        <outlet property="WButton" destination="GkE-Rn-qH1" id="6Rl-dJ-u1Y"/>
                         <outlet property="ZoomInButton" destination="cB0-n4-dOx" id="KtA-Qj-WlX"/>
                         <outlet property="ZoomOutButton" destination="P8r-PG-70m" id="gT8-1S-I30"/>
                         <outlet property="map" destination="brV-px-Xys" id="T3U-qv-jPj"/>

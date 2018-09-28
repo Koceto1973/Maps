@@ -24,38 +24,52 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
     
     @IBOutlet weak var ZoomOutButton: uiButton!
     @IBAction func ZoomOut(_ sender: Any) {
-        lds.latDelta = lds.latDelta*1.2
-        lds.lonDelta = lds.lonDelta*1.2
-        lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
-        map.setRegion(lds.region, animated: true)
+        if (lds.latitude+lds.latDelta/2) < 90 && (lds.latitude-lds.latDelta/2) > -90 {
+            lds.latDelta = lds.latDelta*1.2
+            lds.lonDelta = lds.lonDelta*1.2
+            lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
+            map.setRegion(lds.region, animated: true)
+        }
     }
     
-    @IBOutlet weak var LeftButton: uiButton!
-    @IBAction func Left(_ sender: Any) {
+    @IBOutlet weak var WButton: uiButton!
+    @IBAction func W(_ sender: Any) {
         lds.longitude -= lds.lonDelta*0.2
+        if lds.longitude < -180 {
+            lds.longitude += 360
+        }
         lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
         map.setRegion(lds.region, animated: true)
     }
     
-    @IBOutlet weak var RightButton: uiButton!
-    @IBAction func Right(_ sender: Any) {
+    @IBOutlet weak var EButton: uiButton!
+    @IBAction func E(_ sender: Any) {
         lds.longitude += lds.lonDelta*0.2
+        if lds.longitude > 180 {
+            lds.longitude -= 360
+        }
         lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
         map.setRegion(lds.region, animated: true)
     }
     
-    @IBOutlet weak var UpButton: uiButton!
-    @IBAction func Up(_ sender: Any) {
-        lds.latitude += lds.latDelta*0.2
-        lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
-        map.setRegion(lds.region, animated: true)
+    @IBOutlet weak var NButton: uiButton!
+    @IBAction func N(_ sender: Any) {
+        if (lds.latitude+lds.latDelta/2) < 90  {
+            lds.latitude += lds.latDelta*0.2
+            lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
+            map.setRegion(lds.region, animated: true)
+        }
+        
     }
     
-    @IBOutlet weak var DownButton: uiButton!
-    @IBAction func Down(_ sender: Any) {
-        lds.latitude -= lds.latDelta*0.2
-        lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
-        map.setRegion(lds.region, animated: true)
+    @IBOutlet weak var SButton: uiButton!
+    @IBAction func S(_ sender: Any) {
+        if (lds.latitude-lds.latDelta/2) > -90 {
+            lds.latitude -= lds.latDelta*0.2
+            lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: lds.latDelta, lonD: lds.lonDelta)
+            map.setRegion(lds.region, animated: true)
+        }
+       
     }
     
     override func viewDidLoad() {
@@ -65,7 +79,7 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // to HomeVC
         if let homeVC = segue.destination as? HomeVC {
-            homeVC.lds = self.lds
+            homeVC.lds = locationDataSet.init(lat: lds.latitude, lon: lds.longitude, latD: 1, lonD: 1)
         }
     }
     
