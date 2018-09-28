@@ -37,10 +37,10 @@ class HomeVC: UIViewController {
     var lds:locationDataSet = locationDataSet.init(lat: 0, lon: 0, latD: 1, lonD: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // to BasicMapVC
         if segue.identifier == "HomeVCsegueBasicMapVC" {
             self.lds = locationDataSet.init(lat: Double(latitudeLabel.text!)!, lon: Double(longitudeLabel.text!)!, latD: Double(latitudeDeltaLabel.text!)!, lonD: Double(longitudeDeltaLabel.text!)!)
             let basicMapVC = segue.destination as! BasicMapVC
@@ -48,20 +48,19 @@ class HomeVC: UIViewController {
         }
     }
     
+    // back from BasicMapVC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.latitudeLabel.text = String(lds.latitude)
-        self.latitudeSlider.value = Float(lds.latitude)
+        self.latitudeSlider.setValue(Float(lds.latitude), animated: true )
         self.longitudeLabel.text = String(lds.longitude)
-        self.longitudeSlider.value = Float(lds.longitude)
+        self.longitudeSlider.setValue(Float(lds.longitude), animated: true )
         self.latitudeDeltaLabel.text = String(lds.latDelta)
-        self.latitudeSlider.value = Float(lds.latDelta)
+        self.latitudeSlider.setValue(Float(lds.latDelta), animated: true )
         self.longitudeDeltaLabel.text = String(lds.lonDelta)
-        self.longitudeDeltaSlider.value = Float(lds.lonDelta)
-        
-             
-    }
+        self.longitudeDeltaSlider.setValue(Float(lds.lonDelta), animated: true )
+   }
     
     
 }
