@@ -286,7 +286,7 @@
                                     <constraint firstAttribute="height" constant="30" id="RmD-Oi-qOj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Up"/>
+                                <state key="normal" title="N"/>
                                 <connections>
                                     <action selector="N:" destination="PbG-dU-5nd" eventType="touchUpInside" id="WdE-sl-4sf"/>
                                 </connections>
@@ -298,7 +298,7 @@
                                     <constraint firstAttribute="height" constant="30" id="wb0-hi-Kz0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Down"/>
+                                <state key="normal" title="S"/>
                                 <connections>
                                     <action selector="Down:" destination="PbG-dU-5nd" eventType="touchUpInside" id="jiC-bF-Zte"/>
                                 </connections>
@@ -310,7 +310,7 @@
                                     <constraint firstAttribute="height" constant="30" id="j5R-lb-TN1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Rght"/>
+                                <state key="normal" title="E"/>
                                 <connections>
                                     <action selector="E:" destination="PbG-dU-5nd" eventType="touchUpInside" id="nvi-vb-tBn"/>
                                 </connections>
@@ -334,7 +334,7 @@
                                     <constraint firstAttribute="width" constant="30" id="aw4-JR-84I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Left"/>
+                                <state key="normal" title="W"/>
                                 <connections>
                                     <action selector="W:" destination="PbG-dU-5nd" eventType="touchUpInside" id="DAq-Fz-AyG"/>
                                 </connections>
@@ -678,6 +678,6 @@
         <image name="14281422" width="326" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V0I-1g-IYJ"/>
+        <segue reference="eRX-Mc-NfR"/>
     </inferredMetricsTieBreakers>
 </document>
