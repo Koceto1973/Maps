@@ -435,7 +435,7 @@
                         <viewLayoutGuide key="safeArea" id="aqX-Te-BMb"/>
                     </view>
                     <connections>
-                        <outlet property="Map" destination="mnd-SI-Jv7" id="RsA-3C-FMg"/>
+                        <outlet property="map" destination="mnd-SI-Jv7" id="YAh-im-Xem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfY-50-cIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
