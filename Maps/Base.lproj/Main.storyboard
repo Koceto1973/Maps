@@ -268,6 +268,21 @@
             </objects>
             <point key="canvasLocation" x="225" y="-240"/>
         </scene>
+        <!--PlacemarksVC-->
+        <scene sceneID="WGY-ze-lSY">
+            <objects>
+                <viewController title="PlacemarksVC" id="4nw-cs-Z4Z" customClass="PlacemarksVC" customModule="Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Izs-aq-A0u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oJ6-LC-5eA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAE-qc-ccf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-241"/>
+        </scene>
         <!--Basic MapVC-->
         <scene sceneID="TDK-fR-KQb">
             <objects>
