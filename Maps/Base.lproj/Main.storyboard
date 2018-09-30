@@ -290,7 +290,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg6-Sa-4lW" customClass="uiButton" customModule="Maps" customModuleProvider="target">
-                                <rect key="frame" x="20" y="30" width="50" height="30"/>
+                                <rect key="frame" x="162.5" y="30" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NNw-Zg-YNO"/>
                                     <constraint firstAttribute="width" constant="50" id="nRV-0l-eCJ"/>
@@ -314,17 +314,49 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-HY-h7W" customClass="uiButton" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="294" y="30" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dXc-AI-F4R"/>
+                                    <constraint firstAttribute="width" constant="61" id="kZM-Bl-HbL"/>
+                                </constraints>
+                                <state key="normal" title="+local"/>
+                                <connections>
+                                    <segue destination="3Jf-bD-qIa" kind="show" id="GyL-mv-ERe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40M-u8-RCE" customClass="uiButton" customModule="Maps" customModuleProvider="target">
+                                <rect key="frame" x="20" y="30" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1cF-u7-AeE"/>
+                                    <constraint firstAttribute="width" constant="60" id="QgG-Yd-8Y1"/>
+                                </constraints>
+                                <state key="normal" title="+global"/>
+                                <connections>
+                                    <segue destination="PbG-dU-5nd" kind="show" id="LYh-ih-zxk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60392156862745094" green="0.75686274509803919" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="40M-u8-RCE" firstAttribute="centerY" secondItem="Rg6-Sa-4lW" secondAttribute="centerY" id="3yv-cZ-MXH"/>
+                            <constraint firstItem="TeR-HY-h7W" firstAttribute="centerY" secondItem="Rg6-Sa-4lW" secondAttribute="centerY" id="BoO-aI-weO"/>
                             <constraint firstItem="KFF-nQ-CUn" firstAttribute="leading" secondItem="oJ6-LC-5eA" secondAttribute="leading" id="JoL-tQ-3j1"/>
                             <constraint firstItem="oJ6-LC-5eA" firstAttribute="bottom" secondItem="KFF-nQ-CUn" secondAttribute="bottom" id="K6y-rG-Dnc"/>
+                            <constraint firstItem="40M-u8-RCE" firstAttribute="leading" secondItem="oJ6-LC-5eA" secondAttribute="leading" constant="20" id="KaD-Nv-FI9"/>
                             <constraint firstItem="Rg6-Sa-4lW" firstAttribute="top" secondItem="oJ6-LC-5eA" secondAttribute="top" constant="10" id="dm2-fA-lDo"/>
                             <constraint firstItem="Rg6-Sa-4lW" firstAttribute="leading" secondItem="oJ6-LC-5eA" secondAttribute="leading" constant="20" id="hbz-fG-VPh"/>
                             <constraint firstItem="KFF-nQ-CUn" firstAttribute="top" secondItem="oJ6-LC-5eA" secondAttribute="top" constant="50" id="ivw-3z-MSI"/>
+                            <constraint firstItem="Rg6-Sa-4lW" firstAttribute="centerX" secondItem="Izs-aq-A0u" secondAttribute="centerX" id="lHh-v4-1YV"/>
+                            <constraint firstItem="oJ6-LC-5eA" firstAttribute="trailing" secondItem="TeR-HY-h7W" secondAttribute="trailing" constant="20" id="uHm-eh-71O"/>
                             <constraint firstItem="oJ6-LC-5eA" firstAttribute="trailing" secondItem="KFF-nQ-CUn" secondAttribute="trailing" id="zZe-pM-ulN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oJ6-LC-5eA"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hbz-fG-VPh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="KFF-nQ-CUn" id="EXH-zd-qgp"/>
@@ -744,6 +776,8 @@
         <image name="14281422" width="326" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="GyL-mv-ERe"/>
+        <segue reference="LYh-ih-zxk"/>
         <segue reference="cfQ-ah-rgW"/>
     </inferredMetricsTieBreakers>
 </document>
