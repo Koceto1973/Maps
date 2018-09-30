@@ -9,14 +9,21 @@
 import UIKit
 
 class PlacemarksVC: UIViewController {
+    
+    var placemarks = Placemarks.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? Placemarks {
+            self.placemarks = data
+        }
+        
     }
     
-
+    // UserDefaults.standard.set("data", forKey: "keyToData")
+    
     /*
     // MARK: - Navigation
 
