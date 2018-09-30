@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-243"/>
+            <point key="canvasLocation" x="225" y="-240"/>
         </scene>
         <!--Basic MapVC-->
         <scene sceneID="TDK-fR-KQb">
@@ -280,12 +280,12 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-1f-Cww" customClass="uiButton" customModule="Maps" customModuleProvider="target">
-                                <rect key="frame" x="172.5" y="537" width="30" height="30"/>
+                                <rect key="frame" x="172.5" y="547" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="PQA-Km-uoz"/>
                                     <constraint firstAttribute="height" constant="30" id="RmD-Oi-qOj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="N"/>
                                 <connections>
                                     <action selector="N:" destination="PbG-dU-5nd" eventType="touchUpInside" id="WdE-sl-4sf"/>
@@ -297,7 +297,7 @@
                                     <constraint firstAttribute="width" constant="30" id="LOQ-Bq-lmv"/>
                                     <constraint firstAttribute="height" constant="30" id="wb0-hi-Kz0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="S"/>
                                 <connections>
                                     <action selector="Down:" destination="PbG-dU-5nd" eventType="touchUpInside" id="jiC-bF-Zte"/>
@@ -309,7 +309,7 @@
                                     <constraint firstAttribute="width" constant="30" id="Y1C-5m-sWX"/>
                                     <constraint firstAttribute="height" constant="30" id="j5R-lb-TN1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="E"/>
                                 <connections>
                                     <action selector="E:" destination="PbG-dU-5nd" eventType="touchUpInside" id="nvi-vb-tBn"/>
@@ -333,7 +333,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Ryg-Y6-hBT"/>
                                     <constraint firstAttribute="width" constant="30" id="aw4-JR-84I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="W"/>
                                 <connections>
                                     <action selector="W:" destination="PbG-dU-5nd" eventType="touchUpInside" id="DAq-Fz-AyG"/>
@@ -352,7 +352,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruh-Cc-Lcs" customClass="uiButton" customModule="Maps" customModuleProvider="target">
-                                <rect key="frame" x="167.5" y="580" width="40" height="30"/>
+                                <rect key="frame" x="167.5" y="583.5" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="fL1-4K-Ty4"/>
                                 </constraints>
@@ -376,7 +376,7 @@
                             <constraint firstItem="jTL-OG-Cdg" firstAttribute="centerY" secondItem="cB0-n4-dOx" secondAttribute="centerY" id="hOX-Gp-joO"/>
                             <constraint firstItem="ycT-9x-sRa" firstAttribute="trailing" secondItem="brV-px-Xys" secondAttribute="trailing" id="knn-eT-Owb"/>
                             <constraint firstItem="2rt-1f-Cww" firstAttribute="centerX" secondItem="KVK-xR-eRu" secondAttribute="centerX" id="l1I-UX-q9p"/>
-                            <constraint firstItem="6dL-gG-zrB" firstAttribute="top" secondItem="2rt-1f-Cww" secondAttribute="bottom" constant="50" id="l4p-nX-YUv"/>
+                            <constraint firstItem="6dL-gG-zrB" firstAttribute="top" secondItem="2rt-1f-Cww" secondAttribute="bottom" constant="40" id="l4p-nX-YUv"/>
                             <constraint firstItem="ycT-9x-sRa" firstAttribute="trailing" secondItem="cB0-n4-dOx" secondAttribute="trailing" constant="20" id="m5H-x9-0Hp"/>
                             <constraint firstItem="ycT-9x-sRa" firstAttribute="bottom" secondItem="brV-px-Xys" secondAttribute="bottom" id="pry-E3-fef"/>
                             <constraint firstItem="ycT-9x-sRa" firstAttribute="bottom" secondItem="6dL-gG-zrB" secondAttribute="bottom" constant="20" id="rvE-U8-08s"/>
