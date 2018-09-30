@@ -37,6 +37,14 @@ class PlacemarksVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {  // swipe delete table view row
+            placemarks.Remove(at: indexPath.row)
+            tableView.reloadData()
+            UserDefaults.standard.set(placemarks, forKey: "placemarks")
+        }
+    }
+    
     // UserDefaults.standard.set("data", forKey: "keyToData")
     
     /*
