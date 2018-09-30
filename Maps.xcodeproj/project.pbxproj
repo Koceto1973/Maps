@@ -19,6 +19,7 @@
 		354AF2F8215BF94200D02148 /* LocationDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F7215BF94200D02148 /* LocationDataSet.swift */; };
 		354AF2FA215C0BFE00D02148 /* uiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2F9215C0BFE00D02148 /* uiLabel.swift */; };
 		354AF2FC215C0D7A00D02148 /* uiSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354AF2FB215C0D7A00D02148 /* uiSlider.swift */; };
+		3582246E2161565C00BF83A6 /* Placemarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3582246D2161565C00BF83A6 /* Placemarks.swift */; };
 		3593D0F221614E3800767CBB /* PlacemarksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593D0F121614E3800767CBB /* PlacemarksVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		354AF2F7215BF94200D02148 /* LocationDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataSet.swift; sourceTree = "<group>"; };
 		354AF2F9215C0BFE00D02148 /* uiLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiLabel.swift; sourceTree = "<group>"; };
 		354AF2FB215C0D7A00D02148 /* uiSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uiSlider.swift; sourceTree = "<group>"; };
+		3582246D2161565C00BF83A6 /* Placemarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemarks.swift; sourceTree = "<group>"; };
 		3593D0F121614E3800767CBB /* PlacemarksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarksVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				354AF2F7215BF94200D02148 /* LocationDataSet.swift */,
+				3582246D2161565C00BF83A6 /* Placemarks.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				354AF2FA215C0BFE00D02148 /* uiLabel.swift in Sources */,
 				3593D0F221614E3800767CBB /* PlacemarksVC.swift in Sources */,
 				354AF2F2215BE33E00D02148 /* BasicMapVC.swift in Sources */,
+				3582246E2161565C00BF83A6 /* Placemarks.swift in Sources */,
 				354AF2FC215C0D7A00D02148 /* uiSlider.swift in Sources */,
 				354AF2E1215BD2CE00D02148 /* HomeVC.swift in Sources */,
 				354AF2DF215BD2CE00D02148 /* AppDelegate.swift in Sources */,
