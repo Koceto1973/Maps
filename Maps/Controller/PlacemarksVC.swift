@@ -12,51 +12,49 @@ class PlacemarksVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet weak var tableView: UITableView!
     
-    var placemarks = Placemarks.init()
-
+    var placemarks:[[String]] = [[]]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        // reading the permanent storage
-        if let data = UserDefaults.standard.object(forKey: "placemarks") as? Placemarks {
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
             self.placemarks = data
         }
-        
+        if placemarks.count != 0 {
+            if placemarks[0].count == 0 {
+                placemarks.remove(at: 0)
+                UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
+            }
+        }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return placemarks.number }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
+            self.placemarks = data
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return placemarks.count }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell" )
-        cell.textLabel?.text = String(placemarks.Get(item: 1, of: indexPath.row))
+        cell.textLabel?.text = placemarks[indexPath.row][0]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {  // swipe delete table view row
-            placemarks.Remove(at: indexPath.row)
+            placemarks.remove(at: indexPath.row)
             tableView.reloadData()
-            UserDefaults.standard.set(placemarks, forKey: "placemarks")
+            UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
         }
     }
-    
-    
-    
-    // UserDefaults.standard.set("data", forKey: "keyToData")
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

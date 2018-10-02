@@ -72,26 +72,62 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
        
     }
     
+    var placemarks: [[String]] = [[]]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(self.longpress(gestureRecognizer:)))
         uilpgr.minimumPressDuration = 2
         map.addGestureRecognizer(uilpgr)
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
+            self.placemarks = data
+        }
+        if placemarks.count != 0 {
+            if placemarks[0].count == 0 {
+                placemarks.remove(at: 0)
+                UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
+            }
+        }
+        
     }
     
-   // map annotation add by long press gesture recognizer
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
+            self.placemarks = data
+        }
+    }
+    
+    // map annotation add by long press gesture recognizer
     @objc func longpress(gestureRecognizer: UIGestureRecognizer) {
-    
-        let touchPoint = gestureRecognizer.location(in: self.map)
-        let coordinates = map.convert(touchPoint, toCoordinateFrom: self.map)
-    
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinates
-        annotation.title = "New place"
-        annotation.subtitle = "Maybe I'll go here too..."
-        map.addAnnotation(annotation)
-    
+        if gestureRecognizer.state == UIGestureRecognizer.State.began {
+            let touchPoint = gestureRecognizer.location(in: self.map)
+            let newCoordinate = self.map.convert(touchPoint, toCoordinateFrom: self.map)
+            let location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            var title = ""
+            
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (places, error) in
+                if error != nil { print(error!)  } else {
+                    if let place = places?[0] {
+                        if place.subThoroughfare != nil { title += place.subThoroughfare! + " " }
+                        if place.thoroughfare != nil { title += place.thoroughfare! }
+                    }
+                }
+                // add anotation to map
+                if title == "" { title = "Added \(NSDate())" }
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = newCoordinate
+                annotation.title = title
+                self.map.addAnnotation(annotation)
+                // update storage
+                self.placemarks.append([title,String(newCoordinate.latitude),String(newCoordinate.longitude)])
+                UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
+            })
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

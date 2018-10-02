@@ -26,7 +26,6 @@ class NavigatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegat
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var address: UILabel!
     
-   
     @IBOutlet weak var detailsButton: uiButton!
     @IBAction func detailsClick(_ sender: Any) {
         if detailsFlag {
@@ -44,6 +43,7 @@ class NavigatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegat
     var locationManager = CLLocationManager()
     
     var detailsFlag:Bool = true
+    var placemarks :[[String]] = [[]]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,24 +58,59 @@ class NavigatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegat
         let uilpgr = UILongPressGestureRecognizer(target: self, action: #selector(self.longpress(gestureRecognizer:)))
         uilpgr.minimumPressDuration = 2
         map.addGestureRecognizer(uilpgr)
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
+            self.placemarks = data
+        }
+        if placemarks.count != 0 {
+            if placemarks[0].count == 0 {
+                placemarks.remove(at: 0)
+                UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
+            }
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // reading the permanent storage
+        if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
+            self.placemarks = data
+        }
     }
     
     // map annotation add by long press gesture recognizer
     @objc func longpress(gestureRecognizer: UIGestureRecognizer) {
-        
-        let touchPoint = gestureRecognizer.location(in: self.map)
-        let coordinates = map.convert(touchPoint, toCoordinateFrom: self.map)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinates
-        annotation.title = "New place"
-        annotation.subtitle = "Maybe I'll go here too..."
-        map.addAnnotation(annotation)
-        
+        if gestureRecognizer.state == UIGestureRecognizer.State.began {
+            let touchPoint = gestureRecognizer.location(in: self.map)
+            let newCoordinate = self.map.convert(touchPoint, toCoordinateFrom: self.map)
+            let location = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            var title = ""
+            
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (places, error) in
+                if error != nil { print(error!)  } else {
+                    if let place = places?[0] {
+                        if place.subThoroughfare != nil { title += place.subThoroughfare! + " " }
+                        if place.thoroughfare != nil { title += place.thoroughfare! }
+                    }
+                }
+                // add anotation to map
+                if title == "" { title = "Added \(NSDate())" }
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = newCoordinate
+                annotation.title = title
+                self.map.addAnnotation(annotation)
+                // update storage
+                self.placemarks.append([title,String(newCoordinate.latitude),String(newCoordinate.longitude)])
+                UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
+            })
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //print(locations[0])
+        //animate current location
         lds = locationDataSet.init(lat: locations[0].coordinate.latitude, lon: locations[0].coordinate.longitude, latD: 0.05, lonD: 0.05)
         self.map.setRegion(lds.region, animated: true)
         
@@ -86,6 +121,7 @@ class NavigatorVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegat
         self.speedLabel.text = String(location.speed)
         self.altitudeLabel.text = String(location.altitude)
         
+        // address data extraction
         CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
             if error != nil { print(error!) } else {
                 if let placemark = placemarks?[0] {
