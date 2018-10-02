@@ -115,6 +115,8 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
             annotation.coordinate.longitude = longitude
             annotation.title = self.placemarks[annotationIndex][0]
             self.map.addAnnotation(annotation)
+            
+            self.annotationIndex = -1
         }
     }
     

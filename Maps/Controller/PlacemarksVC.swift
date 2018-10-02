@@ -59,13 +59,13 @@ class PlacemarksVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     // prepare for segue to show annotation
-    var annotationIndex = 0
+    var annotationIndex = -1
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAnnotation" {
             let destinationVC = segue.destination as! BasicMapVC
             destinationVC.annotationIndex = self.annotationIndex
+            self.annotationIndex = -1
         }
-        
     }
     
     // segue after row selection to show annotation
