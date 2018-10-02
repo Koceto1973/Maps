@@ -93,13 +93,28 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
         
     }
     
-    var annotationIndex = 0
+    var annotationIndex = -1
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // reading the permanent storage
         if let data = UserDefaults.standard.object(forKey: "placemarks") as? [[String]] {
             self.placemarks = data
+        }
+        
+        // show selected annotation from PlacemarksVC table
+        if annotationIndex != -1 {
+            // add anotation to updated map
+            let latitude = Double(self.placemarks[annotationIndex][1])!
+            let longitude = Double(self.placemarks[annotationIndex][2])!
+            lds = locationDataSet.init(lat: latitude, lon: longitude, latD: 0.05, lonD: 0.05)
+            map.setRegion(lds.region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.latitude = latitude
+            annotation.coordinate.longitude = longitude
+            annotation.title = self.placemarks[annotationIndex][0]
+            self.map.addAnnotation(annotation)
         }
     }
     
