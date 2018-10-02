@@ -93,6 +93,7 @@ class BasicMapVC: UIViewController, MKMapViewDelegate  {
         
     }
     
+    var annotationIndex = 0
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

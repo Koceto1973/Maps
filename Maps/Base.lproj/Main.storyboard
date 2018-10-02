@@ -333,7 +333,7 @@
                                 </constraints>
                                 <state key="normal" title="+global"/>
                                 <connections>
-                                    <segue destination="PbG-dU-5nd" kind="show" id="LYh-ih-zxk"/>
+                                    <segue destination="PbG-dU-5nd" kind="show" identifier="showAnnotation" id="LYh-ih-zxk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -778,6 +778,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="GyL-mv-ERe"/>
         <segue reference="LYh-ih-zxk"/>
-        <segue reference="cfQ-ah-rgW"/>
+        <segue reference="eRX-Mc-NfR"/>
     </inferredMetricsTieBreakers>
 </document>

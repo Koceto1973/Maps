@@ -49,12 +49,29 @@ class PlacemarksVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
+    // swipe delete table view row
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {  // swipe delete table view row
+        if editingStyle == .delete {
             placemarks.remove(at: indexPath.row)
             tableView.reloadData()
             UserDefaults.standard.set(self.placemarks, forKey: "placemarks")
         }
+    }
+    
+    // prepare for segue to show annotation
+    var annotationIndex = 0
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAnnotation" {
+            let destinationVC = segue.destination as! BasicMapVC
+            destinationVC.annotationIndex = self.annotationIndex
+        }
+        
+    }
+    
+    // segue after row selection to show annotation
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.annotationIndex = indexPath.row
+        performSegue(withIdentifier: "showAnnotation", sender: nil)
     }
    
 }
